@@ -17,7 +17,7 @@ int graph[50][50];
 
 int color[50] = {WHITE};
 
-bool dfs (int v, int p)
+bool dfs (int v)
 {
 	if (color[v]==GRAY)
 	{
@@ -27,8 +27,8 @@ bool dfs (int v, int p)
 		return false;
 	color[v] = GRAY;
 	for (int next=0; next<n; next++)
-		if (next != p && graph[v][next]) 
-			if (dfs(next, p)) return true;
+		if (graph[v][next]) 
+			if (dfs(next)) return true;
 	color[v] = BLACK;
 	return false;
 }
@@ -48,7 +48,7 @@ int main()
 	
 	for (int i = 0; i < n; i++)
 	{
-		if(dfs(i, -1)) 
+		if(dfs(i)) 
 		{
 			has_cycle = true;
 			break;
