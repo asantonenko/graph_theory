@@ -30,4 +30,4 @@ https://www.e-olymp.com/ru/contests/8546
 - https://www.e-olymp.com/ru/problems/2209 - Дополнительная
 
 # Решения Антоненко А.С.
-Файлы A.cpp - G.cpp
+Файлы A.cpp - G.cpp (см. выше).
